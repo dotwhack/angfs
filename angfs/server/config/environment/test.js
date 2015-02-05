@@ -5,6 +5,6 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/angfs-test'
+    uri: 'mongodb://bbailey:redtango1@ds031691.mongolab.com:31691/testsite'
   }
 };

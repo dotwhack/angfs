@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/angfs-dev'
+    uri: 'mongodb://bbailey:redtango1@ds031691.mongolab.com:31691/testsite'
   },
 
   seedDB: true
