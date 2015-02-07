@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angfsApp')
-  .controller('MessagesCtrl', function ($scope, $http, socket ) {
+  .controller('MessagesCtrl', function ($scope, $http, socket, Auth ) {
 	  $scope.awesomeThings = [];
     
     $http.get('/api/messages').success(function(awesomeThings) {

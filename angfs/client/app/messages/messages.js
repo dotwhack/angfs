@@ -6,6 +6,7 @@ angular.module('angfsApp')
       .state('messages', {
         url: '/messages',
         templateUrl: 'app/messages/messages.html',
-        controller: 'MessagesCtrl'
+        controller: 'MessagesCtrl',
+        authenticate: true
       });
   });
