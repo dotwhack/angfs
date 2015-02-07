@@ -18,6 +18,7 @@ angular.module('angfsApp')
     };
 
     $scope.deleteThing = function(thing) {
+    	console.log('Delete');
       $http.delete('/api/things/' + thing._id);
     };
 

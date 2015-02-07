@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Messages = require('../api/messages/messages.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -42,8 +43,36 @@ User.find({}).remove(function() {
     name: 'Admin',
     email: 'admin@admin.com',
     password: 'admin'
-  }, function() {
+  }, {
+	    provider: 'local',
+	    role: 'user',
+	    name: 'brandon',
+	    email: 'b@gmail.com',
+	    password: 'user'
+	  }, function() {
       console.log('finished populating users');
     }
   );
 });
+
+Messages.find({}).remove(function() {
+	Messages.create({
+	    name : 'Message1',
+	    info : 'THis is a Message'
+	  }, {
+	    name : 'Message2',
+	    info : 'THis is a Message'
+	  }, {
+	    name : 'Message3',
+	    info : 'THis is a Message'
+	  },  {
+	    name : 'Message4',
+	    info : 'THis is a Message'
+	  },  {
+	    name : 'Message5',
+	    info : 'THis is a Message'
+	  },{
+	    name : 'Message6',
+	    info : 'THis is a Message'
+	  });
+	});

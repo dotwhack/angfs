@@ -1,4 +1,14 @@
 'use strict';
+var mongo_uri;
+
+if(process.env.VCAP_SERVICES){
+	var env = JSON.parse(process.env.VCAP_SERVICES);
+	mongo_uri = env['mongolab'][0].credentials.uri;		
+}
+else{
+	mongo_uri = 'mongodb://bbailey:redtango1@ds031691.mongolab.com:31691/testsite'
+}
+
 
 // Production specific configuration
 // =================================
@@ -15,7 +25,7 @@ module.exports = {
   mongo: {
     uri:    process.env.MONGOLAB_URI ||
             process.env.MONGOHQ_URL ||
-            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME ||
-            'mongodb://bbailey:redtango1@ds031691.mongolab.com:31691/testsite'
+            process.env.OPENSHIFT_MONGODB_DB_URL+process.env.OPENSHIFT_APP_NAME || 
+            mongo_uri
   }
 };
