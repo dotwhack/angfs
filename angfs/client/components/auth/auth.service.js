@@ -70,6 +70,23 @@ angular.module('angfsApp')
             return cb(err);
           }.bind(this)).$promise;
       },
+      /**
+       * Change Role
+       *
+       * @param  {String}   user_id
+           * @param  {Function} callback - optional
+       * @return {Promise}
+       */
+      changeRole: function(user_id, role, callback) {
+        var cb = callback || angular.noop;
+        return User.changeRole({ id: user_id }, {
+          role: role
+        }, function(user) {
+          return cb(user);
+        }, function(err) {
+          return cb(err);
+        }).$promise;
+      },
 
       /**
        * Change password

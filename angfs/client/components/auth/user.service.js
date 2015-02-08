@@ -12,6 +12,12 @@ angular.module('angfsApp')
           controller:'password'
         }
       },
+      changeRole: {
+          method: 'POST',
+          params: {
+            controller:'role'
+          }
+        },
       get: {
         method: 'GET',
         params: {

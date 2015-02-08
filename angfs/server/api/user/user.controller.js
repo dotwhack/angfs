@@ -34,11 +34,27 @@ exports.create = function (req, res, next) {
   });
 };
 
+
+/**
+ * Update user
+ */
+exports.role = function (req, res, next) {
+	
+	User.findByIdAndUpdate(req.params.id,{role: 'admin'}, function(err, user){
+		if(err) return res.send(500,err);
+		return res.send(204);
+	});
+//	console.log(req.body);
+//	res.send(req.params.id);
+//	res.end();
+};
+
 /**
  * Get a single user
  */
 exports.show = function (req, res, next) {
   var userId = req.params.id;
+  
 
   User.findById(userId, function (err, user) {
     if (err) return next(err);

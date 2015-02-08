@@ -58,11 +58,12 @@
 {
     width: 96px;
     height: 96px;
-    margin: 0 auto 10px;
-    display: block;
+    margin: 0 auto 0 30px;
+    padding: 2px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+
 }
 .need-help
 {
@@ -72,4 +73,10 @@
 {
     display: block;
     margin-top: 10px;
+}
+.profile-panel{
+	width: 300px;
+	margin: 0 auto;
+	padding: 5px;
+	
 }
