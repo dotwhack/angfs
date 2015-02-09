@@ -36,17 +36,18 @@ exports.create = function (req, res, next) {
 
 
 /**
- * Update user
+ * Change user role
  */
 exports.role = function (req, res, next) {
 	
-	User.findByIdAndUpdate(req.params.id,{role: 'admin'}, function(err, user){
+	User.findByIdAndUpdate(req.params.id,req.body, function(err, user){
 		if(err) return res.send(500,err);
 		return res.send(204);
 	});
-//	console.log(req.body);
-//	res.send(req.params.id);
-//	res.end();
+	//console.log(req.body);
+	//console.log(req.params.id);
+	//res.send(req.params.role);
+	//res.end();
 };
 
 /**

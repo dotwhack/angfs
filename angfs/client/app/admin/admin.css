@@ -1,1 +1,22 @@
-.trash { color:rgb(209, 91, 71); }
+.trash { 
+	background-color: rgba(247, 12, 52, 0.6); 
+	color:rgba(255, 255, 255, 0.9); 
+	border: 0;
+}
+.apply { 
+	background-color: rgba(7, 250, 52, 0.6);
+	color: color:rgba(255, 255, 255, 0.9);
+	border: 0;
+}
+.btn-group {
+	margin-bottom: 40px;
+}
+.role_panel{
+	width: 80px;
+	margin-left:40px;
+	margin-top: -20px;
+	padding:5px;
+}
+.cursor {
+	cursor: pointer;
+}

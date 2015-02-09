@@ -13,11 +13,11 @@ angular.module('angfsApp')
         }
       },
       changeRole: {
-          method: 'POST',
-          params: {
-            controller:'role'
-          }
-        },
+        method: 'POST',
+        params: {
+          controller:'role'
+        }
+      },
       get: {
         method: 'GET',
         params: {

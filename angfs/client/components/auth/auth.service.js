@@ -80,7 +80,7 @@ angular.module('angfsApp')
       changeRole: function(user_id, role, callback) {
         var cb = callback || angular.noop;
         return User.changeRole({ id: user_id }, {
-          role: role
+        	role: role
         }, function(user) {
           return cb(user);
         }, function(err) {
