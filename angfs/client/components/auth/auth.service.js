@@ -77,9 +77,9 @@ angular.module('angfsApp')
            * @param  {Function} callback - optional
        * @return {Promise}
        */
-      changeRole: function(user_id, role, callback) {
+      changeRole: function(userId, role, callback) {
         var cb = callback || angular.noop;
-        return User.changeRole({ id: user_id }, {
+        return User.changeRole({ id: userId }, {
         	role: role
         }, function(user) {
           return cb(user);
