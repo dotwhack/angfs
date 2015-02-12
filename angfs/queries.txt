@@ -1,0 +1,181 @@
+	
+**Counts all records in survey with IH greater than 7
+	
+	Surveys.count({"Incident Handling Sat: Accessibility":{$gte:7}},function(err,count){
+		if(err) console.log(err);
+		console.log(count);
+	});
+	res.end();
+	
+**Counts all records in survey
+	
+		Surveys.count({},function(err,count){
+		if(err) console.log(err);
+		console.log(count);
+	});
+	res.end();
+	
+**Counts all records in survey with SR US
+	
+		Surveys.count({"Customer Sub Region":"US"},function(err,count){
+		if(err) console.log(err);
+		console.log(count);
+	});
+	res.end();
+	
+	
+		var options = {
+		limit : 1
+
+	};
+	var fields = {
+//			"Marker": false,
+//		    "Sample Status": false,
+//		    "Sample Time": false,
+//		    "Sent Time": false,
+//		    "Sample Version": false,
+//		    "Language": false,
+//		    "Resend Count": false,
+//		    "Completed Survey Language": false,
+		    "Date Received": true,
+//		    "US Gov Product Y/N": false,
+		    "Overall Satisfaction": true,
+//		    "Overall Satisfaction Comment": false,
+//		    "Overall Satisfaction Categorized Category": false,
+//		    "Overall Satisfaction Categorized Comment": false,
+//		    "Company Size": false,
+		    "Overall Satisfaction Comment Followup": true,
+		    "Likelihood to Recommend Lenovo Product": true,
+//		    "Storage Product": false,
+//		    "Storage Product - Other": false,
+//		    "Storage Product Sat": false,
+		    "Reason for Contact": true,
+		    "Reason for Contact - Other": true,
+//		    "Web Screener": false,
+		    "Case Resolved Y/N": true,
+//		    "Number of Contacts": false,
+//		    "Reason Case Not Closed": false,
+//		    "Reason Case Not Closed - Other": false,
+		    "Resolution Speed": true,
+		    "Incident Handling Sat: Accessibility": true,
+		    "Incident Handling Sat: Communication Skills": true,
+		    "Incident Handling Sat: Technical Expertise": true,
+		    "Incident Handling: Exceptional Service Nomination": true,
+		    "Onsite Svc Rep Sat: Meeting Appointment": true,
+		    "Onsite Svc Rep Sat: Communication Skills": true,
+		    "Onsite Svc Rep Sat: Technical Expertise": true,
+		    "Onsite Svc Rep Sat: Speed": true,
+//		    "Onsite Svc Rep Sat: Exceptional Service Nomination": false,
+//		    "Mail-In Repair Sat: Ease of Return": true,
+//		    "Mail-In Repair Sat: Repair Status": true,
+//		    "Mail-In Repair Sat: Speed of Repair": true,
+//		    "Mail-In Repair Sat: Repair Quality": true,
+//		    "Mail - In Repair: Comment": false,
+		    "Part Repair / Exchange Sat: Part Delivery Time": true,
+		    "Part Repair / Exchange Sat: Part Quality": true,
+		    "Part Repair / Exchange Sat: Ease of Installation": true,
+		    "Part Repair / Exchange Sat: Ease of Return": true,
+//		    "Advanced Exchange Experience: Product Delivery Time": false,
+//		    "Advanced Exchange Experience: Replacement Quality": false,
+//		    "Advanced Exchange Experience: Ease of Return": false,
+//		    "Carry In Repair Sat: Convenient Location": false,
+//		    "Carry In Repair Sat: Communication Skills": false,
+//		    "Carry In Repair Sat: Technical Expertise": false,
+//		    "Carry In Repair Sat: Repair Status": false,
+//		    "Carry In Repair Sat: Speed": false,
+//		    "Carry In Repair Sat: Quality": false,
+//		    "Business Partner Sat: Communication Skills": false,
+//		    "Business Partner Sat: Technical Expertise": false,
+//		    "Business Partner Sat: Repair Status": false,
+//		    "Business Partner Sat: Speed": false,
+//		    "Business Partner Sat: Quality": false,
+//		    "Reason Support Site Not Used": false,
+//		    "Reason Support Site Not Used - Other": false,
+//		    "Web Support: Quality of Resolution": false,
+//		    "Web Support: Site Performance": false,
+//		    "Web Support: Usability": false,
+//		    "Web Site Functions: Manual Downloads": false,
+//		    "Web Site Functions: Automated Downloads": false,
+//		    "Web Site Functions: Email Chat": false,
+//		    "Web Site Functions: Hints and Tips": false,
+//		    "Web Site Functions: Product Info": false,
+//		    "Web Site Functions: Warranty Lookup": false,
+//		    "Web Site Functions: Phone List": false,
+//		    "Web Site Functions: Registration": false,
+//		    "Web Site Improvement: Exceptional Service Nomination": false,
+//		    "Fee: Sales Rep": false,
+//		    "Fee: Tech Rep": false,
+//		    "Fee: Value": false,
+//		    "FEE: Web Resources": false,
+//		    "FEE: Web Resources - Other": false,
+//		    "FEE: Likelihood to Recommend": false,
+//		    "RVL: Replacement Needs Met": false,
+//		    "RVL: Replacement Timeliness": false,
+//		    "RVL: Replacement Satisfaction": false,
+//		    "ITC: Communication Process": false,
+//		    "ITC: Technical Expertise": false,
+//		    "ITC: ITC Competition": false,
+//		    "ITC: ITC Competition - Other": false,
+//		    "ITC: ITC Vendor Comparison": false,
+//		    "ITC: ITC Improvement": false,
+//		    "ITCPM: Project Manager": false,
+//		    "ITCPM: Process and Communication": false,
+//		    "ITCPM: Overall PMO": false,
+//		    "ITCPM: ITC PMO Improvement": false,
+//		    "IAT: Presale": false,
+//		    "IAT: Quote Process": false,
+//		    "IAT: Order Experience": false,
+//		    "IAT: Quality of Service": false,
+//		    "IAT: Likelihood to Recommend": false,
+//		    "IAT: Asset Tagging Improvement": false,
+//		    "Business Classification": false,
+//		    "Industry": false,
+//		    "Industry - Other": false,
+//		    "Opt In Y/N": false,
+//		    "LTT": false,
+		    "Customer Region": true,
+//		    "Customer Country": false,
+//		    "Product Line": false,
+		    "Product Number": true,
+//		    "Employee ID": false,
+		    "Transaction Number": true,
+		    "Data Feed - Service Delivery Type": true,
+//		    "Transaction Employee ID": false,
+//		    "Data Feed - Transaction Reported / Received Date": false,
+//		    "Data Feed - Transaction Cleared Date": false,
+//		    "Bus Partner ID": false,
+//		    "Identified Survey Language": false,
+//		    "Customer First Name": false,
+//		    "Customer Last Name": false,
+//		    "Customer Email": false,
+//		    "Customer Company Name": false,
+//		    "Customer Mailing Address": false,
+//		    "Contact Phone": false,
+//		    "Transaction Reported / Received Date": false,
+//		    "Transaction Cleared Date": false,
+//		    "Service Delivery Type": false,
+//		    "Partner ID": false,
+//		    "Physical Location Name of Partner": false,
+//		    "Product Brand Segment": false,
+//		    "Warranty Status": false,
+//		    "Serial Number": false,
+//		    "Team Leader Id": false,
+//		    "Time of Day": false,
+//		    "Trigger Status": false,
+//		    "Action Plan Owner": false,
+//		    "Customer Contact Date": false,
+//		    "Action Plan Comments": false,
+//		    "Actual Complete Date": false,
+//		    "Resolution Status": false,
+//		    "Business Unit": false,
+//		    "Root cause": false,
+//		    "Action Description": false,
+//		    "Incident Handling: Comment": false,
+		    "Customer Sub Region": true
+	};
+// Surveys.find({},options, function(err, surveys) {
+//		if (err) {
+//			return handleError(res, err);
+//		}
+//		return res.json(200, surveys);
+//	}

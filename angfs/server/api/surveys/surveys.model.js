@@ -1,0 +1,60 @@
+'use strict';
+
+var mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
+
+var SurveysSchema = new Schema({
+	"MONTH":String,
+	"WEEK_BEGIN_DATE":String,
+	"DATE_RECEIVED":String,
+	"REGION":String,
+	"GEO":String,
+	"LENOVO_GEO":String,
+	"COUNTRY_CODE":String,
+	"PRODUCT_LINE":String,
+	"PRODUCT_NUMBER":String,
+	"SERVICE_DELIVERY_TYPE":String,
+	"OVERALL_SAT":String,
+	"OVERALL_SAT_CMT":String,
+	"RESOLUTION_SPEED":String,
+	"INC_HAND_ACCESS":String,
+	"INC_HAND_COMM_SKILL":String,
+	"INC_HAND_TECH_EXPERT":String,
+	"OS_MET_APPT":String,
+	"OS_COMM_SKILL":String,
+	"OS_TECH_EXPERT":String,
+	"OS_EXCEP_SVC_NOM":String,
+	"DEP_EASE_OF_RET":String,
+	"DEP_REP_STATUS":String,
+	"DEP_SPEED_OF_REP":String,
+	"DEP_REP_QUAL":String,
+	"CRU_DEL_TIME":String,
+	"CRU_PART_QUALITY":String,
+	"CRU_EASE_OF_INST":String,
+	"CRU_EASE_OF_RET":String,
+	"RECOMMEND_LENOVO_PRODUCT":String,
+	"SERVICER":String,
+	"ALERT":String,
+	"CAD":String,
+	"CUST_NAME":String,
+	"COMPANY_NAME":String,
+	"CUST_EMAIL":String,
+	"TSR_NAME":String,
+	"TSR_ID":String,
+	"TSR_TEAM":String,
+	"WARRANTY_STATUS":String,
+	"SERIAL_NUMBER":String,
+	"RECEIVED_DTS":String,
+	"SERIES":String,
+	"MTYPE":String,
+	"L2_RES_CATEGORY":String,
+	"L3_RES_PROBLEM":String,
+	"L4_RES_RESOLUTION":String,
+	"WARR_START_DATE":String,
+	"BUSINESS_CLASSIFICATION":String,
+	"OS_REP_SAT_SPEED":String
+
+
+});
+
+module.exports = mongoose.model('Surveys', SurveysSchema);

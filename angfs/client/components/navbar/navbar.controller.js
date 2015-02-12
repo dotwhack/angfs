@@ -5,6 +5,9 @@ angular.module('angfsApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+    	'title':'Surveys',
+    	'link':'/surveys'
     }];
 
     $scope.isCollapsed = true;
